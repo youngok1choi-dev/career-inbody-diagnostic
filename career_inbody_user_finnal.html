@@ -6,7 +6,8 @@
 <title>AI 커리어 인바디 진단</title>
 <style>
 * { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:'Malgun Gothic','맑은 고딕',Apple SD Gothic Neo,sans-serif; background:#eef2f7; color:#1a2a3a; min-height:100vh; font-size:17px; }
+html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif; background:#eef2f7; color:#1a2a3a; min-height:100vh; font-size:17px; }
 .screen { display:none; min-height:100vh; flex-direction:column; }
 .screen.active { display:flex; }
 
@@ -29,8 +30,8 @@ body { font-family:'Malgun Gothic','맑은 고딕',Apple SD Gothic Neo,sans-seri
 .status-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:18px; }
 .status-btn { display:flex; align-items:center; gap:10px; background:#f5f8fc; border:2.5px solid #d0d8e8; border-radius:14px; padding:14px 16px; cursor:pointer; transition:all .15s; }
 .status-btn.selected { background:#eef3fc; border-color:#3a6fd8; }
-.s-icon { font-size:22px; }
-.s-text { font-size:16px; font-weight:800; color:#1a2a3a; }
+.s-icon { font-size:22px; flex-shrink:0; }
+.s-text { font-size:15px; font-weight:800; color:#1a2a3a; white-space:nowrap; }
 
 .btn-primary { width:100%; background:linear-gradient(135deg,#3a6fd8,#1a4ab8); color:#fff; border:none; border-radius:14px; padding:18px; font-size:19px; font-weight:800; cursor:pointer; transition:opacity .2s; opacity:.45; pointer-events:none; }
 
@@ -38,7 +39,7 @@ body { font-family:'Malgun Gothic','맑은 고딕',Apple SD Gothic Neo,sans-seri
 #survey { background:#eef2f7; }
 .survey-header { background:#0d1f3c; padding:16px 20px; position:sticky; top:0; z-index:100; }
 .header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
-.header-title { font-size:16px; font-weight:700; color:#fff; }
+.header-title { font-size:15px; font-weight:700; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .header-step { font-size:15px; color:#7a9fd8; font-weight:700; }
 .prog-track { height:8px; background:rgba(255,255,255,.2); border-radius:4px; }
 .prog-fill { height:100%; background:#4a9fd8; border-radius:4px; transition:width .4s; }
@@ -61,7 +62,7 @@ body { font-family:'Malgun Gothic','맑은 고딕',Apple SD Gothic Neo,sans-seri
 .likert input:checked + .l-btn .l-score { color:#3a6fd8; }
 .likert input:checked + .l-btn .l-label { color:#3a6fd8; }
 .nav-bar { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid #e0e8f0; padding:14px 20px; display:flex; gap:12px; z-index:200; }
-.btn-nav { flex:1; border-radius:12px; padding:16px; font-size:17px; font-weight:800; cursor:pointer; border:none; }
+.btn-nav { flex:1; border-radius:12px; padding:16px; font-size:17px; font-weight:800; cursor:pointer; border:none; white-space:nowrap; }
 .btn-prev { background:#f0f4f8; color:#4a5a6a; }
 .btn-next { background:linear-gradient(135deg,#3a6fd8,#1a4ab8); color:#fff; }
 .btn-next:disabled { background:#c8d4e8; cursor:not-allowed; }
@@ -98,6 +99,17 @@ body { font-family:'Malgun Gothic','맑은 고딕',Apple SD Gothic Neo,sans-seri
   .sw-wrap { grid-template-columns:1fr; }
   .intro-card { padding:36px 20px; }
   .intro-title { font-size:22px; }
+  .btn-nav { font-size:15px; padding:14px 10px; }
+  .sec-name { font-size:19px; }
+  .q-text { font-size:16px; }
+}
+@media(max-width:360px){
+  .s-text { font-size:14px; }
+  .status-btn { padding:12px 10px; gap:8px; }
+  .btn-primary { font-size:17px; }
+  .l-btn { height:72px; }
+  .l-score { font-size:18px; }
+  .l-label { font-size:9px; }
 }
 </style>
 </head>
