@@ -1,0 +1,33 @@
+- generic [ref=e3]:
+  - generic [ref=e4]: AI Career Inbody
+  - generic [ref=e5]: AI 커리어 인바디 진단하기
+  - generic [ref=e6]: (재취업 준비도 검사)
+  - generic [ref=e7]:
+    - text: 현재 나의 재취업 준비도를 파악하는 검사입니다.
+    - text: 각 질문에 솔직하게 답변해 주시면 됩니다.
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]: "6"
+      - generic [ref=e11]: 측정 항목
+    - generic [ref=e12]:
+      - generic [ref=e13]: "36"
+      - generic [ref=e14]: 설문 문항
+    - generic [ref=e15]:
+      - generic [ref=e16]: "180"
+      - generic [ref=e17]: 만점
+  - textbox "성함을 입력해 주세요" [ref=e18]
+  - generic [ref=e19]: 현재 상태를 선택해 주세요
+  - generic [ref=e20]:
+    - generic [ref=e21] [cursor=pointer]:
+      - generic [ref=e22]: 💼
+      - generic [ref=e23]: 재직중
+    - generic [ref=e24] [cursor=pointer]:
+      - generic [ref=e25]: 📅
+      - generic [ref=e26]: 퇴직예정
+    - generic [ref=e27] [cursor=pointer]:
+      - generic [ref=e28]: 🚪
+      - generic [ref=e29]: 퇴직
+    - generic [ref=e30] [cursor=pointer]:
+      - generic [ref=e31]: 📝
+      - generic [ref=e32]: 기타
+  - button "검사 시작하기 →"
